@@ -1,0 +1,12 @@
+base=# \d users
+                                            Table "public.users"
+   Column    |            Type             | Collation | Nullable |                 Default
+-------------+-----------------------------+-----------+----------+-----------------------------------------
+ id_users    | integer                     |           | not null | nextval('users_id_users_seq'::regclass)
+ login_users | character varying(60)       |           | not null |
+ senha_users | character varying(60)       |           | not null |
+ data_users  | timestamp without time zone |           |          | now()
+ perm_users  | character varying(1)        |           | not null |
+ email_users | character varying(60)       |           |          |
+Indexes:
+    "users_pkey" PRIMARY KEY, btree (id_users)
